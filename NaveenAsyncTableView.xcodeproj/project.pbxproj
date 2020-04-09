@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9CF97EF8243F15B100C9AFC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF97EF7243F15B100C9AFC7 /* AppDelegate.swift */; };
+		9CF97EFA243F15B100C9AFC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF97EF9243F15B100C9AFC7 /* SceneDelegate.swift */; };
+		9CF97EFC243F15B100C9AFC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF97EFB243F15B100C9AFC7 /* ViewController.swift */; };
+		9CF97EFF243F15B100C9AFC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF97EFD243F15B100C9AFC7 /* Main.storyboard */; };
+		9CF97F01243F15B300C9AFC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CF97F00243F15B300C9AFC7 /* Assets.xcassets */; };
+		9CF97F04243F15B300C9AFC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF97F02243F15B300C9AFC7 /* LaunchScreen.storyboard */; };
+		9CF97F0F243F15B300C9AFC7 /* NaveenAsyncTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF97F0E243F15B300C9AFC7 /* NaveenAsyncTableViewTests.swift */; };
+		9CF97F1A243F15B300C9AFC7 /* NaveenAsyncTableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF97F19243F15B300C9AFC7 /* NaveenAsyncTableViewUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9CF97F0B243F15B300C9AFC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CF97EEC243F15B100C9AFC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CF97EF3243F15B100C9AFC7;
+			remoteInfo = NaveenAsyncTableView;
+		};
+		9CF97F16243F15B300C9AFC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CF97EEC243F15B100C9AFC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CF97EF3243F15B100C9AFC7;
+			remoteInfo = NaveenAsyncTableView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9CF97EF4243F15B100C9AFC7 /* NaveenAsyncTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaveenAsyncTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CF97EF7243F15B100C9AFC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9CF97EF9243F15B100C9AFC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9CF97EFB243F15B100C9AFC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9CF97EFE243F15B100C9AFC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9CF97F00243F15B300C9AFC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9CF97F03243F15B300C9AFC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9CF97F05243F15B300C9AFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CF97F0A243F15B300C9AFC7 /* NaveenAsyncTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaveenAsyncTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CF97F0E243F15B300C9AFC7 /* NaveenAsyncTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaveenAsyncTableViewTests.swift; sourceTree = "<group>"; };
+		9CF97F10243F15B300C9AFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CF97F15243F15B300C9AFC7 /* NaveenAsyncTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaveenAsyncTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CF97F19243F15B300C9AFC7 /* NaveenAsyncTableViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaveenAsyncTableViewUITests.swift; sourceTree = "<group>"; };
+		9CF97F1B243F15B300C9AFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9CF97EF1243F15B100C9AFC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF97F07243F15B300C9AFC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF97F12243F15B300C9AFC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9CF97EEB243F15B100C9AFC7 = {
+			isa = PBXGroup;
+			children = (
+				9CF97EF6243F15B100C9AFC7 /* NaveenAsyncTableView */,
+				9CF97F0D243F15B300C9AFC7 /* NaveenAsyncTableViewTests */,
+				9CF97F18243F15B300C9AFC7 /* NaveenAsyncTableViewUITests */,
+				9CF97EF5243F15B100C9AFC7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9CF97EF5243F15B100C9AFC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9CF97EF4243F15B100C9AFC7 /* NaveenAsyncTableView.app */,
+				9CF97F0A243F15B300C9AFC7 /* NaveenAsyncTableViewTests.xctest */,
+				9CF97F15243F15B300C9AFC7 /* NaveenAsyncTableViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9CF97EF6243F15B100C9AFC7 /* NaveenAsyncTableView */ = {
+			isa = PBXGroup;
+			children = (
+				9CF97EF7243F15B100C9AFC7 /* AppDelegate.swift */,
+				9CF97EF9243F15B100C9AFC7 /* SceneDelegate.swift */,
+				9CF97EFB243F15B100C9AFC7 /* ViewController.swift */,
+				9CF97EFD243F15B100C9AFC7 /* Main.storyboard */,
+				9CF97F00243F15B300C9AFC7 /* Assets.xcassets */,
+				9CF97F02243F15B300C9AFC7 /* LaunchScreen.storyboard */,
+				9CF97F05243F15B300C9AFC7 /* Info.plist */,
+			);
+			path = NaveenAsyncTableView;
+			sourceTree = "<group>";
+		};
+		9CF97F0D243F15B300C9AFC7 /* NaveenAsyncTableViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				9CF97F0E243F15B300C9AFC7 /* NaveenAsyncTableViewTests.swift */,
+				9CF97F10243F15B300C9AFC7 /* Info.plist */,
+			);
+			path = NaveenAsyncTableViewTests;
+			sourceTree = "<group>";
+		};
+		9CF97F18243F15B300C9AFC7 /* NaveenAsyncTableViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9CF97F19243F15B300C9AFC7 /* NaveenAsyncTableViewUITests.swift */,
+				9CF97F1B243F15B300C9AFC7 /* Info.plist */,
+			);
+			path = NaveenAsyncTableViewUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9CF97EF3243F15B100C9AFC7 /* NaveenAsyncTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CF97F1E243F15B300C9AFC7 /* Build configuration list for PBXNativeTarget "NaveenAsyncTableView" */;
+			buildPhases = (
+				9CF97EF0243F15B100C9AFC7 /* Sources */,
+				9CF97EF1243F15B100C9AFC7 /* Frameworks */,
+				9CF97EF2243F15B100C9AFC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NaveenAsyncTableView;
+			productName = NaveenAsyncTableView;
+			productReference = 9CF97EF4243F15B100C9AFC7 /* NaveenAsyncTableView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9CF97F09243F15B300C9AFC7 /* NaveenAsyncTableViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CF97F21243F15B300C9AFC7 /* Build configuration list for PBXNativeTarget "NaveenAsyncTableViewTests" */;
+			buildPhases = (
+				9CF97F06243F15B300C9AFC7 /* Sources */,
+				9CF97F07243F15B300C9AFC7 /* Frameworks */,
+				9CF97F08243F15B300C9AFC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CF97F0C243F15B300C9AFC7 /* PBXTargetDependency */,
+			);
+			name = NaveenAsyncTableViewTests;
+			productName = NaveenAsyncTableViewTests;
+			productReference = 9CF97F0A243F15B300C9AFC7 /* NaveenAsyncTableViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9CF97F14243F15B300C9AFC7 /* NaveenAsyncTableViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CF97F24243F15B300C9AFC7 /* Build configuration list for PBXNativeTarget "NaveenAsyncTableViewUITests" */;
+			buildPhases = (
+				9CF97F11243F15B300C9AFC7 /* Sources */,
+				9CF97F12243F15B300C9AFC7 /* Frameworks */,
+				9CF97F13243F15B300C9AFC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CF97F17243F15B300C9AFC7 /* PBXTargetDependency */,
+			);
+			name = NaveenAsyncTableViewUITests;
+			productName = NaveenAsyncTableViewUITests;
+			productReference = 9CF97F15243F15B300C9AFC7 /* NaveenAsyncTableViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9CF97EEC243F15B100C9AFC7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Naveen Chandra";
+				TargetAttributes = {
+					9CF97EF3243F15B100C9AFC7 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					9CF97F09243F15B300C9AFC7 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 9CF97EF3243F15B100C9AFC7;
+					};
+					9CF97F14243F15B300C9AFC7 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 9CF97EF3243F15B100C9AFC7;
+					};
+				};
+			};
+			buildConfigurationList = 9CF97EEF243F15B100C9AFC7 /* Build configuration list for PBXProject "NaveenAsyncTableView" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9CF97EEB243F15B100C9AFC7;
+			productRefGroup = 9CF97EF5243F15B100C9AFC7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9CF97EF3243F15B100C9AFC7 /* NaveenAsyncTableView */,
+				9CF97F09243F15B300C9AFC7 /* NaveenAsyncTableViewTests */,
+				9CF97F14243F15B300C9AFC7 /* NaveenAsyncTableViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9CF97EF2243F15B100C9AFC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF97F04243F15B300C9AFC7 /* LaunchScreen.storyboard in Resources */,
+				9CF97F01243F15B300C9AFC7 /* Assets.xcassets in Resources */,
+				9CF97EFF243F15B100C9AFC7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF97F08243F15B300C9AFC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF97F13243F15B300C9AFC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9CF97EF0243F15B100C9AFC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF97EFC243F15B100C9AFC7 /* ViewController.swift in Sources */,
+				9CF97EF8243F15B100C9AFC7 /* AppDelegate.swift in Sources */,
+				9CF97EFA243F15B100C9AFC7 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF97F06243F15B300C9AFC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF97F0F243F15B300C9AFC7 /* NaveenAsyncTableViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF97F11243F15B300C9AFC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF97F1A243F15B300C9AFC7 /* NaveenAsyncTableViewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9CF97F0C243F15B300C9AFC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CF97EF3243F15B100C9AFC7 /* NaveenAsyncTableView */;
+			targetProxy = 9CF97F0B243F15B300C9AFC7 /* PBXContainerItemProxy */;
+		};
+		9CF97F17243F15B300C9AFC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CF97EF3243F15B100C9AFC7 /* NaveenAsyncTableView */;
+			targetProxy = 9CF97F16243F15B300C9AFC7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9CF97EFD243F15B100C9AFC7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CF97EFE243F15B100C9AFC7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9CF97F02243F15B300C9AFC7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CF97F03243F15B300C9AFC7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9CF97F1C243F15B300C9AFC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9CF97F1D243F15B300C9AFC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9CF97F1F243F15B300C9AFC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NaveenAsyncTableView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chandraNaveen.NaveenAsyncTableView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9CF97F20243F15B300C9AFC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NaveenAsyncTableView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chandraNaveen.NaveenAsyncTableView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9CF97F22243F15B300C9AFC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NaveenAsyncTableViewTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chandraNaveen.NaveenAsyncTableViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NaveenAsyncTableView.app/NaveenAsyncTableView";
+			};
+			name = Debug;
+		};
+		9CF97F23243F15B300C9AFC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NaveenAsyncTableViewTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chandraNaveen.NaveenAsyncTableViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NaveenAsyncTableView.app/NaveenAsyncTableView";
+			};
+			name = Release;
+		};
+		9CF97F25243F15B300C9AFC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NaveenAsyncTableViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chandraNaveen.NaveenAsyncTableViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NaveenAsyncTableView;
+			};
+			name = Debug;
+		};
+		9CF97F26243F15B300C9AFC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NaveenAsyncTableViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chandraNaveen.NaveenAsyncTableViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NaveenAsyncTableView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9CF97EEF243F15B100C9AFC7 /* Build configuration list for PBXProject "NaveenAsyncTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CF97F1C243F15B300C9AFC7 /* Debug */,
+				9CF97F1D243F15B300C9AFC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CF97F1E243F15B300C9AFC7 /* Build configuration list for PBXNativeTarget "NaveenAsyncTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CF97F1F243F15B300C9AFC7 /* Debug */,
+				9CF97F20243F15B300C9AFC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CF97F21243F15B300C9AFC7 /* Build configuration list for PBXNativeTarget "NaveenAsyncTableViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CF97F22243F15B300C9AFC7 /* Debug */,
+				9CF97F23243F15B300C9AFC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CF97F24243F15B300C9AFC7 /* Build configuration list for PBXNativeTarget "NaveenAsyncTableViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CF97F25243F15B300C9AFC7 /* Debug */,
+				9CF97F26243F15B300C9AFC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9CF97EEC243F15B100C9AFC7 /* Project object */;
+}
