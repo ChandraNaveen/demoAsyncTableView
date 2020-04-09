@@ -101,7 +101,7 @@
 			children = (
 				9CF97EF7243F15B100C9AFC7 /* AppDelegate.swift */,
 				9CF97EF9243F15B100C9AFC7 /* SceneDelegate.swift */,
-				9CF97EFB243F15B100C9AFC7 /* ViewController.swift */,
+				9CF97F27243F189600C9AFC7 /* HomeVC */,
 				9CF97EFD243F15B100C9AFC7 /* Main.storyboard */,
 				9CF97F00243F15B300C9AFC7 /* Assets.xcassets */,
 				9CF97F02243F15B300C9AFC7 /* LaunchScreen.storyboard */,
@@ -126,6 +126,14 @@
 				9CF97F1B243F15B300C9AFC7 /* Info.plist */,
 			);
 			path = NaveenAsyncTableViewUITests;
+			sourceTree = "<group>";
+		};
+		9CF97F27243F189600C9AFC7 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				9CF97EFB243F15B100C9AFC7 /* ViewController.swift */,
+			);
+			path = HomeVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
