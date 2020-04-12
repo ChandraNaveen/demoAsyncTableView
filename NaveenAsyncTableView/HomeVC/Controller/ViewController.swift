@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     let tableView = UITableView()
-    var dataModel = [DemoModel]()
+    var dataModel:DemoModel?
     
     
     private lazy var activityIndicator: UIActivityIndicatorView = {
@@ -19,6 +19,14 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         activityIndicator.style = .large
         return activityIndicator
     }()
+    
+ override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+
     
     
     override func viewDidLoad()
@@ -32,12 +40,13 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     func configureNavigationBar()
     {
+      
         /// Setting up Activity Indicator
         let rightBarButton = UIBarButtonItem(customView: activityIndicator)
         navigationItem.setLeftBarButton(rightBarButton, animated: true)
         
         //Refresh Button
-        let leftBarButton = UIBarButtonItem(title: NSLocalizedString("Refresh", comment: ""),
+        let leftBarButton = UIBarButtonItem(title: "Refresh",
                                             style: .plain,
                                             target: self,
                                             action: #selector(refreshNews))
@@ -63,10 +72,6 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! NaveenTableViewCell
         
         
-        cell.textLabel?.text = "naveen"
-        cell.detailLabel.text = "NaveenNaveenNaveenNaveenNaveenNaveenNaveenNaveenNaveen,NaveenNaveenNaveenNaveenNaveenNaveenNaveenNaveenNaveen,NaveenNaveenNaveenNaveenNaveenNaveenNaveenNaveenNaveen"
-        cell.contentImageView.image = UIImage(named: "")
-        
         return cell
     }
     
@@ -78,7 +83,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return dataModel.count
+        return dataModel?.rows?.count ?? 0
     }
     
     
@@ -96,16 +101,18 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     private func fetchData() {
         activityIndicator.startAnimating()
         NetworkManager.fetchData{ [weak self] (result) in
+            print(result)
             guard let self = self else { return }
             switch result {
-            case .success(let newsData):
-            self.dataModel = JSONDecoder.decode(DemoModel.self)
+            case .success(let data):
+           
+                self.dataModel = data
+            
             case .failure(let error):
-                
                 /// Showing alert for errors
                 DispatchQueue.main.async() {
                     let alert = Alert.init(subTitle: error.localizedDescription,
-                                           cancelTitle: NSLocalizedString("localiseAlertButtonOk", comment: ""))
+                                           cancelTitle:"ok")
                     alert.presentAlert(from: self)
                 }
             }

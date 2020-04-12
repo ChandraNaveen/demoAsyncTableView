@@ -28,14 +28,14 @@ import UIKit
         
         /// fetchNews function will fetch the news stories and returns
         /// Result<DemoModel> as completion handler
-        public static func fetchData( completion: @escaping (Result<DemoModel>) -> Void) {
+        public static func fetchData(shouldFail: Bool = false, completion: @escaping (Result<DemoModel>) -> Void) {
            
             let mainUrlString = EndPoints.APIUrl.rawValue
             
             
             guard let url = URL(string: mainUrlString)else{return }
             
-            Networking.getData(url: url) { (data, response, error) in
+            NetworkManager.getData(url: url) { (data, response, error) in
                 
                 if let error = error {
                     completion(.failure(error))
@@ -45,10 +45,18 @@ import UIKit
                 guard let data = data, error == nil else { return }
                 
                 do {
-                    let decoder = JSONDecoder()
-                    decoder.dateDecodingStrategy = .millisecondsSince1970
-                    let json = try decoder.decode(DemoModel.self, from: data)
-                    completion(.success(json))
+                   let responseStrInISOLatin = String(data: data, encoding: String.Encoding.isoLatin1)
+                    guard let modifiedDataInUTF8Format = responseStrInISOLatin?.data(using: String.Encoding.utf8) else {
+                          print("could not convert data to UTF-8 format")
+                          return
+                     }
+//                    let json1 = try JSONSerialization.jsonObject(with: modifiedDataInUTF8Format, options: []) as? [String : Any]
+//
+//                    print(json1)
+                        let decoder = JSONDecoder()
+                        let json = try decoder.decode(DemoModel.self, from: modifiedDataInUTF8Format)
+                           completion(.success(json))
+                   
                 } catch let error {
                     completion(.failure(error))
                 }
@@ -59,7 +67,7 @@ import UIKit
         /// returns Result<Data> as completion handler
         public static func downloadImage(url: URL,
                                          completion: @escaping (Result<Data>) -> Void) {
-            Networking.getData(url: url) { data, response, error in
+            NetworkManager.getData(url: url) { data, response, error in
                 
                 if let error = error {
                     completion(.failure(error))
