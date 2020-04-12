@@ -12,20 +12,21 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     let tableView = UITableView()
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         configureTableView()
-       
-        // Do any additional setup after loading the view.
+        //Do any additional setup after loading the view.
     }
     
     func configureTableView()
     {
-              self.view = tableView
-              tableView.dataSource = self
-              tableView.delegate = self
-              tableView.register(NaveenTableViewCell.self, forCellReuseIdentifier: "customCell")
-              
+        self.view = tableView
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(NaveenTableViewCell.self, forCellReuseIdentifier: "customCell")
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableView.automaticDimension
     }
     
     
@@ -35,9 +36,10 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! NaveenTableViewCell
         
-        cell.detailLabel.text = "NaveenNaveenNaveenNaveenNaveenNaveenNaveenNaveenNaveen"
-        cell.nameLabel.text = "Naveen"
-        cell.imageContainer.image = UIImage(named: "")
+      
+        cell.textLabel?.text = "naveen"
+        cell.detailLabel.text = "NaveenNaveenNaveenNaveenNaveenNaveenNaveenNaveenNaveen,NaveenNaveenNaveenNaveenNaveenNaveenNaveenNaveenNaveen,NaveenNaveenNaveenNaveenNaveenNaveenNaveenNaveenNaveen"
+        cell.contentImageView.image = UIImage(named: "")
         
         return cell
     }
@@ -59,14 +61,11 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         return UITableView.automaticDimension
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        
+        return 100
     }
-    
-    
-    
-    
     
     
     
