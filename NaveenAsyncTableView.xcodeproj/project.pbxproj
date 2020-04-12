@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		9C4F5B8224436CD2001FE3AA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F5B8124436CD2001FE3AA /* NetworkManager.swift */; };
 		9C4F5B8524436D31001FE3AA /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F5B8424436D31001FE3AA /* EndPoints.swift */; };
-		9C4F5B872443714D001FE3AA /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F5B862443714D001FE3AA /* Extension.swift */; };
+		9C4F5B872443714D001FE3AA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F5B862443714D001FE3AA /* Image.swift */; };
 		9C4F5B8A244375C1001FE3AA /* AssetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F5B89244375C1001FE3AA /* AssetModel.swift */; };
 		9C4F5B8F244376E2001FE3AA /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F5B8E244376E2001FE3AA /* HUD.swift */; };
 		9C4F5B9124438271001FE3AA /* DemoJSON.json in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F5B9024438271001FE3AA /* DemoJSON.json */; };
+		9C4F5B9324438791001FE3AA /* AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F5B9224438790001FE3AA /* AutoLayout.swift */; };
 		9CF97EF8243F15B100C9AFC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF97EF7243F15B100C9AFC7 /* AppDelegate.swift */; };
 		9CF97EFA243F15B100C9AFC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF97EF9243F15B100C9AFC7 /* SceneDelegate.swift */; };
 		9CF97EFC243F15B100C9AFC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF97EFB243F15B100C9AFC7 /* ViewController.swift */; };
@@ -46,10 +47,11 @@
 /* Begin PBXFileReference section */
 		9C4F5B8124436CD2001FE3AA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9C4F5B8424436D31001FE3AA /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
-		9C4F5B862443714D001FE3AA /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		9C4F5B862443714D001FE3AA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		9C4F5B89244375C1001FE3AA /* AssetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetModel.swift; sourceTree = "<group>"; };
 		9C4F5B8E244376E2001FE3AA /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		9C4F5B9024438271001FE3AA /* DemoJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DemoJSON.json; sourceTree = "<group>"; };
+		9C4F5B9224438790001FE3AA /* AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayout.swift; sourceTree = "<group>"; };
 		9CF97EF4243F15B100C9AFC7 /* NaveenAsyncTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaveenAsyncTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF97EF7243F15B100C9AFC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CF97EF9243F15B100C9AFC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,8 +108,9 @@
 		9C4F5B882443725A001FE3AA /* Helper  */ = {
 			isa = PBXGroup;
 			children = (
-				9C4F5B862443714D001FE3AA /* Extension.swift */,
+				9C4F5B862443714D001FE3AA /* Image.swift */,
 				9C4F5B8E244376E2001FE3AA /* HUD.swift */,
+				9C4F5B9224438790001FE3AA /* AutoLayout.swift */,
 			);
 			path = "Helper ";
 			sourceTree = "<group>";
@@ -334,12 +337,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C4F5B872443714D001FE3AA /* Extension.swift in Sources */,
+				9C4F5B872443714D001FE3AA /* Image.swift in Sources */,
 				9CF97F29243F1A2600C9AFC7 /* NaveenTableViewCell.swift in Sources */,
 				9CF97EFC243F15B100C9AFC7 /* ViewController.swift in Sources */,
 				9CF97F2D243F214000C9AFC7 /* ExtensionUIVIew.swift in Sources */,
 				9C4F5B8224436CD2001FE3AA /* NetworkManager.swift in Sources */,
 				9CF97F2B243F1F4F00C9AFC7 /* DemoModel.swift in Sources */,
+				9C4F5B9324438791001FE3AA /* AutoLayout.swift in Sources */,
 				9C4F5B8F244376E2001FE3AA /* HUD.swift in Sources */,
 				9CF97EF8243F15B100C9AFC7 /* AppDelegate.swift in Sources */,
 				9C4F5B8524436D31001FE3AA /* EndPoints.swift in Sources */,

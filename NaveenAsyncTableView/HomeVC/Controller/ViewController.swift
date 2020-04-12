@@ -59,7 +59,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         self.view = tableView
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(NaveenTableViewCell.self, forCellReuseIdentifier: "customCell")
+        tableView.register(CustomCell.self, forCellReuseIdentifier: "customCell")
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableView.automaticDimension
     }
@@ -69,8 +69,14 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! NaveenTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomCell
+        let data =  dataModel?.rows?[indexPath.row] as!  Asset
         
+        cell.titleLabel.text = data.title
+        
+        cell.descriptionLabel.text = data.description
+        
+        cell.contentImage.loadThumbnail(urlSting: data.imageHref ?? "")
         
         return cell
     }
@@ -98,6 +104,8 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         return 100
     }
     
+      // MARK: - data functions
+    
     private func fetchData() {
         activityIndicator.startAnimating()
         NetworkManager.fetchData{ [weak self] (result) in
@@ -106,7 +114,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             switch result {
             case .success(let data):
            
-                self.dataModel = data
+            self.dataModel = data
             
             case .failure(let error):
                 /// Showing alert for errors
@@ -120,11 +128,18 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             /// Reload tableView and dismiss activity indicator
             DispatchQueue.main.async() {
                 self.activityIndicator.stopAnimating()
+                //set title
+                self.setTitle()
                 self.tableView.reloadData()
             }
         }
     }
     
+    
+    func setTitle()
+    {
+        self.title = dataModel?.title! ?? ""
+    }
     
     /// Refresh button action
     @objc private func refreshNews(_ sender: Any) {

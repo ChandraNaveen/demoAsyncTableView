@@ -8,67 +8,122 @@
 
 import UIKit
 
-class NaveenTableViewCell: UITableViewCell {
+class CustomCell: UITableViewCell {
     
+
+  
+    // MARK: - Private Variables
     
+     let titleLabel : UILabel = {
+        let lbl = UILabel()
+        lbl.textColor = UIColor.brown
+        lbl.font = UIFont.boldSystemFont(ofSize: 24)
+        lbl.textAlignment = .left
+        return lbl
+    }()
     
-    let nameLabel = UILabel()
-    let detailLabel = UILabel()
-    let contentImageView = UIImageView()
+   
     
-    // MARK: Initalizers
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+     let descriptionLabel : UILabel = {
+        let lbl = UILabel()
+        lbl.textColor = UIColor.brown
+        lbl.font = UIFont.systemFont(ofSize: 16)
+        lbl.textAlignment = .left
+        lbl.numberOfLines = 0
+        return lbl
+    }()
+    
+  
+       
+    
+     let contentImage : UIImageView = {
+        let imgView = UIImageView(image: UIImage(named: "tempImage"))
+        imgView.contentMode = .scaleAspectFit
+        imgView.clipsToBounds = true
+        imgView.layer.cornerRadius = 12
+        imgView.layer.borderWidth = 1.0
+        imgView.layer.borderColor = UIColor.black.cgColor
+        return imgView
+    }()
+    
+    // MARK: - initilization
+    
+    override init(style: UITableViewCell.CellStyle,
+                  reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-       
+        addSubview(titleLabel)
+        addSubview(descriptionLabel)
+        addSubview(contentImage)
+
+        /// Setting up constraints for the rowImage
+               setupRowImage()
+        
+        /// Setting up constraints for the rowImage
+        setupRowImage()
         
         
-        // configure imageView
-        self.contentView.addSubview(contentImageView)
+        /// Setting up constraints for the titleLabel
+        setupTitleLabel()
         
-  
-        // configure titleLabel
-        contentView.addSubview(nameLabel)
-        nameLabel.translatesAutoresizingMaskIntoConstraints = false
-//        nameLabel.leadingAnchor.constraint(equalTo: .trailingAnchor).isActive = true
-//        nameLabel.topAnchor.constraint(equalTo: marginGuide.topAnchor).isActive = true
-//        nameLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor).isActive = true
-        nameLabel.numberOfLines = 0
-        nameLabel.font = UIFont(name: "AvenirNext-DemiBold", size: 16)
+        /// Setting up constraints for the descriptionLabel
+        setupDescriptionLabel()
         
-        // configure authorLabel
-        contentView.addSubview(detailLabel)
-        detailLabel.translatesAutoresizingMaskIntoConstraints = false
-//        detailLabel.leadingAnchor.constraint(equalTo: .trailingAnchor).isActive = true
-//        detailLabel.bottomAnchor.constraint(equalTo: marginGuide.bottomAnchor).isActive = true
-//        detailLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor).isActive = true
-//        detailLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor).isActive = true
-        detailLabel.numberOfLines = 0
-        detailLabel.font = UIFont(name: "Avenir-Book", size: 12)
-        detailLabel.textColor = UIColor.lightGray
-        
-      contentImageView.centerYAnchor.constraint(equalTo:self.contentView.centerYAnchor).isActive = true
-               contentImageView.leadingAnchor.constraint(equalTo:self.contentView.leadingAnchor, constant:10).isActive = true
-               contentImageView.widthAnchor.constraint(equalToConstant:70).isActive = true
-               contentImageView.heightAnchor.constraint(equalToConstant:70).isActive = true
-               
-              
-               
-               nameLabel.topAnchor.constraint(equalTo:self.topAnchor).isActive = true
-               nameLabel.leadingAnchor.constraint(equalTo:self.leadingAnchor).isActive = true
-               nameLabel.trailingAnchor.constraint(equalTo:self.trailingAnchor).isActive = true
-               
-               detailLabel.topAnchor.constraint(equalTo:self.nameLabel.bottomAnchor).isActive = true
-               detailLabel.leadingAnchor.constraint(equalTo:self.leadingAnchor).isActive = true
-               detailLabel.topAnchor.constraint(equalTo:self.nameLabel.bottomAnchor).isActive = true
-               detailLabel.leadingAnchor.constraint(equalTo:self.leadingAnchor).isActive = true
-        
+    }
+    
+    // MARK: - Private Functions
+    
+    private func setupRowImage() {
+        contentImage.addAnchor(top: nil,
+                        left: leftAnchor,
+                        bottom: nil,
+                        right: titleLabel.leftAnchor,
+                        paddingTop: 5,
+                        paddingLeft: 5,
+                        paddingBottom: 5,
+                        paddingRight: 10,
+                        width: 90,
+                        height: 90,
+                        enableInsets: false)
+        let imageCenterY = NSLayoutConstraint(item: self,
+                                              attribute: .centerY,
+                                              relatedBy: .equal,
+                                              toItem: contentImage,
+                                              attribute: .centerY,
+                                              multiplier: 1.0,
+                                              constant: 0.0)
+        imageCenterY.isActive  = true
+    }
+    
+    private func setupTitleLabel() {
+        titleLabel.addAnchor(top: topAnchor,
+                             left: contentImage.rightAnchor,
+                             bottom: descriptionLabel.topAnchor,
+                             right: rightAnchor,
+                             paddingTop: 10,
+                             paddingLeft: 10,
+                             paddingBottom: 0,
+                             paddingRight: 20,
+                             width: 0,
+                             height: 0,
+                             enableInsets: false)
+    }
+    
+    private func setupDescriptionLabel() {
+        descriptionLabel.addAnchor(top: titleLabel.bottomAnchor,
+                                   left: contentImage.rightAnchor,
+                                   bottom: bottomAnchor,
+                                   right: rightAnchor,
+                                   paddingTop: 0,
+                                   paddingLeft: 10,
+                                   paddingBottom: 10,
+                                   paddingRight: 20,
+                                   width: 0,
+                                   height: 0,
+                                   enableInsets: false)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
-    
 }
