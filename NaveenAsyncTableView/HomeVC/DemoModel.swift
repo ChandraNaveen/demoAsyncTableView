@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct  NaveenModel:Decodable {
+struct  DemoModel:Decodable {
     
     var title: String?
     var imgURL: String?
