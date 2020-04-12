@@ -25,6 +25,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
 
         // Hide the navigation bar on the this view controller
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    
     }
 
     
@@ -107,7 +108,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
       // MARK: - data functions
     
     private func fetchData() {
-        activityIndicator.startAnimating()
+        self.activityIndicator.startAnimating()
         NetworkManager.fetchData{ [weak self] (result) in
             print(result)
             guard let self = self else { return }

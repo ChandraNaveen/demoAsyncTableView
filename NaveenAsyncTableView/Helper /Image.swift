@@ -31,7 +31,11 @@ extension UIImageView {
                 imageCache.setObject(imageToCache, forKey: urlSting as AnyObject)
                 self.image = UIImage(data: data)
             case .failure(_):
-                self.image = UIImage(named: "noImage")
+                
+                DispatchQueue.main.async() {
+                     self.image = UIImage(named: "tempImage")
+                }
+               
             }
         }
     }
