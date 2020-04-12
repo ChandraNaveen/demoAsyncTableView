@@ -14,8 +14,18 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view  = tableView
+        configureTableView()
+       
         // Do any additional setup after loading the view.
+    }
+    
+    func configureTableView()
+    {
+              self.view = tableView
+              tableView.dataSource = self
+              tableView.delegate = self
+              tableView.register(NaveenTableViewCell.self, forCellReuseIdentifier: "customCell")
+              
     }
     
     
@@ -23,7 +33,11 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! NaveenTableViewCell
+        
+        cell.detailLabel.text = "NaveenNaveenNaveenNaveenNaveenNaveenNaveenNaveenNaveen"
+        cell.nameLabel.text = "Naveen"
+        cell.imageContainer.image = UIImage(named: "")
         
         return cell
     }

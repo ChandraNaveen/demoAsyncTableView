@@ -15,6 +15,9 @@
 		9CF97F04243F15B300C9AFC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF97F02243F15B300C9AFC7 /* LaunchScreen.storyboard */; };
 		9CF97F0F243F15B300C9AFC7 /* NaveenAsyncTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF97F0E243F15B300C9AFC7 /* NaveenAsyncTableViewTests.swift */; };
 		9CF97F1A243F15B300C9AFC7 /* NaveenAsyncTableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF97F19243F15B300C9AFC7 /* NaveenAsyncTableViewUITests.swift */; };
+		9CF97F29243F1A2600C9AFC7 /* NaveenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF97F28243F1A2600C9AFC7 /* NaveenTableViewCell.swift */; };
+		9CF97F2B243F1F4F00C9AFC7 /* NaveenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF97F2A243F1F4F00C9AFC7 /* NaveenModel.swift */; };
+		9CF97F2D243F214000C9AFC7 /* ExtensionUIVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF97F2C243F214000C9AFC7 /* ExtensionUIVIew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		9CF97F15243F15B300C9AFC7 /* NaveenAsyncTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaveenAsyncTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF97F19243F15B300C9AFC7 /* NaveenAsyncTableViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaveenAsyncTableViewUITests.swift; sourceTree = "<group>"; };
 		9CF97F1B243F15B300C9AFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CF97F28243F1A2600C9AFC7 /* NaveenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaveenTableViewCell.swift; sourceTree = "<group>"; };
+		9CF97F2A243F1F4F00C9AFC7 /* NaveenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaveenModel.swift; sourceTree = "<group>"; };
+		9CF97F2C243F214000C9AFC7 /* ExtensionUIVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIVIew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,7 @@
 				9CF97F00243F15B300C9AFC7 /* Assets.xcassets */,
 				9CF97F02243F15B300C9AFC7 /* LaunchScreen.storyboard */,
 				9CF97F05243F15B300C9AFC7 /* Info.plist */,
+				9CF97F2C243F214000C9AFC7 /* ExtensionUIVIew.swift */,
 			);
 			path = NaveenAsyncTableView;
 			sourceTree = "<group>";
@@ -132,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				9CF97EFB243F15B100C9AFC7 /* ViewController.swift */,
+				9CF97F28243F1A2600C9AFC7 /* NaveenTableViewCell.swift */,
+				9CF97F2A243F1F4F00C9AFC7 /* NaveenModel.swift */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -267,7 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CF97F29243F1A2600C9AFC7 /* NaveenTableViewCell.swift in Sources */,
 				9CF97EFC243F15B100C9AFC7 /* ViewController.swift in Sources */,
+				9CF97F2D243F214000C9AFC7 /* ExtensionUIVIew.swift in Sources */,
+				9CF97F2B243F1F4F00C9AFC7 /* NaveenModel.swift in Sources */,
 				9CF97EF8243F15B100C9AFC7 /* AppDelegate.swift in Sources */,
 				9CF97EFA243F15B100C9AFC7 /* SceneDelegate.swift in Sources */,
 			);
